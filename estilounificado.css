@@ -1,0 +1,692 @@
+/* ============================================================
+   ESTILOS GLOBALES
+   ============================================================ */
+body {
+    background-image: url("wall.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100%;
+    margin: 1%;
+    padding: 0.5%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 35px;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif ;
+    font-weight: lighter;
+    color: rgb(255, 255, 255);
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5vw;
+    color: rgb(126, 117, 117);
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    background-color: #000000bd;
+}
+h3 {
+    text-align: center;
+    font-size: 2vw;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 20px;
+    padding: 0.5%;
+    background-color: #222;
+    justify-content: center;
+}
+
+/* ============================================================
+   NAV + MENÚ HAMBURGUESA
+   ============================================================ */
+
+#menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    background-color: #222;
+    padding: 2% 4%;
+    user-select: none;
+    border: 2px solid #ffcc00;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.hamburger:hover {
+    background-color: #ffcc00;
+    color: #222;
+}
+
+nav {
+    background-color: #222;
+}
+
+.navbar {
+    background-color: #222;
+}
+
+.navbar-menu {
+    display: block;
+    background-color: #222;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 10px;
+    padding: 1%;
+    background-color: #383838;
+    justify-content: center;
+    gap: 5%;
+}
+
+.nav-links li {
+    margin: 1%;
+    width: auto;
+    flex: 0 2 auto;
+    white-space: nowrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+    transition: 0.1s;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+    background-color: #333;
+}
+
+@media (max-width: 1024px) {
+    .hamburger {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 3% 4%;
+        font-size: 24px;
+        text-align: center;
+        background-color: #222;
+        border: 2px solid #ffcc00;
+        border-radius: 5px;
+        margin-bottom: 1%;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .hamburger:hover {
+        background-color: #ffcc00;
+        color: #222;
+    }
+
+    .navbar-menu {
+        display: none;
+        width: 100%;
+        background-color: #222;
+        border: 1px solid #444;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    #menu-toggle:checked ~ .navbar-menu {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .nav-links li {
+        width: 100%;
+        margin: 0;
+        border-bottom: 1px solid #444;
+        background-color: #222;
+    }
+
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+        padding: 4% 4%;
+        text-align: center;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: #222;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        background-color: #333;
+        color: #ffcc00;
+    }
+}
+
+/* Media query adicional para móviles pequeños */
+@media (max-width: 480px) {
+    .hamburger {
+        font-size: 20px;
+        padding: 4% 4%;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+        padding: 5% 4%;
+    }
+}
+
+/* ============================================================
+   SECCIONES DEL ÍNDICE
+   ============================================================ */
+#Moto110cc,
+#Moto150cc,
+#Moto200cc,
+#Moto250cc,
+#ubicacion {
+    background-size: cover;
+    background-position: center;
+    margin: 2%;
+    padding: 5%;
+    min-height: 120px;
+}
+
+#Moto110cc { background-image: url("motos110.png"); }
+#Moto150cc { background-image: url("moto150.png"); }
+#Moto200cc { background-image: url("moto200.png"); }
+#Moto250cc { background-image: url("moto250.png"); }
+#ubicacion { background-image: url("Ubicacion.png"); }
+/* nuevo */
+
+#Moto110cc a,
+#Moto150cc a,
+#Moto200cc a,
+#Moto250cc a,
+#ubicacion a {
+    display: inline;
+    background-color: rgba(30, 107, 0, 0.849);
+    color: rgb(202, 202, 202);
+    padding: 1% 5%;
+    text-decoration: none;
+    border-radius: 3%;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    position: absolute;
+    position: relative; /* Cambia absolute por relative */
+    top: 115px;        /* Esto lo sube suavemente desde su posición original */
+}
+#Moto110cc a,
+#Moto150cc a,
+#Moto200cc a,
+#Moto250cc a,
+#ubicacion a { left: -2%; }
+
+
+#Moto110cc a:hover,
+#Moto150cc a:hover,
+#Moto200cc a:hover,
+#Moto250cc a:hover,
+#ubicacion a:hover {
+    background-color: rgb(8, 34, 0);
+    color: white;
+}
+
+/* ============================================================
+   TARJETAS DE DETALLE
+   ============================================================ */
+.especificaciones h1 {
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    padding: 0.5%;
+    width: 100%;
+    border-radius: 2%;
+    margin-top: 4%;
+}
+
+.moto-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1%;
+    min-height: 1%;
+    margin-top: 1%;
+    padding: 1%;
+    font-size: 10px;
+}
+
+.descripcion p {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 10%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent);
+    padding: 2%;
+    width: 10%;
+}
+
+.especificaciones {
+    background: linear-gradient(to right, rgba(0,0,0,0.7), transparent);
+    padding: 1%;
+    width: 50%;
+    border-radius: 1.5%;
+    margin-top: 2%;
+}
+
+.especificaciones h3 {
+    color: #ff0000;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    border-bottom: 1% solid;
+}
+
+.especificaciones ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1%;
+}
+
+.especificaciones ul li {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 2;
+    padding-left: 10px;
+    border-left: 3px solid #4CAF50;
+    margin-bottom: 5px;
+}
+
+.imagen-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 40%;
+    background-color: #00000042;
+    padding: 1px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.moto-img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.btn-ver {
+    background-color: #4CAF50;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-ver:hover {
+    background-color: #26682a;
+}
+
+/* ============================================================
+   ESTILOS PARA TELEFONO
+   ============================================================ */
+
+@media (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 6vw;
+    }
+
+    h2 {
+        font-size: 4vw;
+    }
+
+    h3 {
+        font-size: 4vw;
+    }
+
+    .moto-card {
+        flex-direction: column;
+        gap: 2%;
+        padding: 5%;
+    }
+
+    .descripcion p {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .especificaciones {
+        width: 100%;
+        padding: 3%;
+        margin-top: 1%;
+    }
+
+    .especificaciones h1 {
+        font-size: 18px;
+    }
+
+    .especificaciones h3 {
+        font-size: 20px;
+    }
+
+    .especificaciones ul li {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .imagen-container {
+        width: 100%;
+        gap: 10px;
+        background-color: #8583831c;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .moto-img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .btn-ver {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    /* Ajustes para las secciones del índice */
+    #Moto110cc,
+    #Moto150cc,
+    #Moto200cc,
+    #Moto250cc {
+        background-size: cover;
+        background-position: center;
+        margin: 2%;
+        padding: 5%;
+    }
+
+    #Moto110cc a,
+    #Moto150cc a,
+    #Moto200cc a,
+    #Moto250cc a {
+        position: static;
+        display: block;
+        text-align: center;
+        margin-top: 15%;
+        font-size: 16px;
+        padding: 2% 4%;
+    }
+}
+
+/* ============================================================
+   HEADER - MEJORADO
+   ============================================================ */
+.header {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    padding: 1% 1%;
+    margin-bottom: 1%;
+    border-bottom: 10px solid #ffcc00;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.header-container {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    margin: 0;
+    padding: 2% 0;
+    font-size: 4.5vw;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background: linear-gradient(135deg, #ffcc00, #ff9800);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+}
+
+/* Actualizar estilos de navbar en header */
+.header .navbar {
+    background-color: transparent;
+    padding: 0;
+}
+
+.header .navbar-menu {
+    background-color: #222;
+}
+
+/* ============================================================
+   FOOTER - MEJORADO Y DECORADO
+   ============================================================ */
+.footer {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: white;
+    padding: 2% 2%;
+    margin-top: 1%;
+    text-align: center;
+    border-top: 10px solid #ffcc00;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.footer-container {
+    max-width: auto;
+    height: 200px;
+    margin: 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 0%;
+}
+
+.footer-content {
+    font-size: 18px;
+    color: #ddd;
+    padding: 1% 0;
+    border-bottom: 2px solid #ffcc00;
+}
+
+.footer-content p {
+    margin: 0.5% 0;
+    letter-spacing: 2px;
+}
+
+.footer-redes {
+    padding: 0.5% 1%;
+    margin-top: -0.5%;
+}
+
+.footer-redes h3 {
+    color: #ffcc00;
+    font-size: 30px;
+    margin: 0 1% 0.5% 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    background-color: transparent;
+    display: block;
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 6%;
+    margin-top: 2px;
+    flex-wrap: wrap;
+}
+
+.redes-sociales a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #ffcc00, #ff9800);
+    color: #000000;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 30px;
+    transition: all 0.5s ease;
+    box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.redes-sociales a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.redes-sociales a:hover::before {
+    width: 200px;
+    height: 100px;
+}
+
+.redes-sociales a:hover {
+    background: linear-gradient(135deg, #ff9800, #ffcc00);
+    transform: scale(1.15) rotateZ(5deg);
+    box-shadow: 0 8px 25px srgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+.redes-sociales a i {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================================
+   FOOTER RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+    .header {
+        padding: 5% 2%;
+        border-bottom: 4px solid #ffcc00;
+    }
+
+    .logo {
+        font-size: 6vw;
+        letter-spacing: 2px;
+        padding: 3% 0;
+    }
+
+    .footer {
+        padding: 7% 3%;
+        border-top: 4px solid #ffcc00;
+    }
+
+    .footer-content {
+        font-size: 14px;
+        padding: 3% 0;
+    }
+
+    .footer-redes h3 {
+        font-size: 24px;
+        margin: 0 1% 2% 0;
+    }
+
+    .redes-sociales {
+        gap: 4%;
+        margin-top: 1%;
+    }
+
+    .redes-sociales a {
+        width: 60px;
+        height: 60px;
+        font-size: 26px;
+    }
+}
+
+/* ============================================================
+   ESTILOS PARA UBICACIONES CON ICONOS
+   ============================================================ */
+.ubicacion-lista ul {
+    list-style: none;
+    padding: 0;
+    margin: 2% 0;
+}
+.ubicacion-lista h1{
+    background-color: #0000000a;
+    padding: 1%;
+    border-radius: 2px;
+}
+.ubicacion-lista li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 2% 3%;
+    margin: 1% 0;
+    background-color: rgba(34, 34, 34, 0.9);
+    border-left: 4px solid #ffcc00;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    transition: all 0.3s ease;
+}
+.ubicacion-lista p {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 2% 3%;
+    margin: 1% 0;
+    background-color: rgba(34, 34, 34, 0.9);
+    border-left: 4px solid #ffcc00;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    transition: all 0.3s ease;
+}
+
+.ubicacion-lista li:hover {
+    background-color: rgba(50, 50, 50, 0.95);
+    transform: translateX(10px);
+    border-left-color: #ff9800;
+}
+
+.ubicacion-lista i {
+    color: #ffcc00;
+    font-size: 28px;
+    min-width: 28px;
+}
+
+.ubicacion-lista li:hover i {
+    color: #ff9800;
+    transform: scale(1.2);
+}
